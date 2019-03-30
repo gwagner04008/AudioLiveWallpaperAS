@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string-array name="theme_names">
+        <item>"Blue - Reflection"</item>
+        <item>"Green - Vertical mirror"</item>
+        <item>"Radiating circles"</item>
+    </string-array>
+    
+    <string-array name="theme_name_values">
+        <item>"blue"</item>
+        <item>"green"</item>
+        <item>"circle"</item>
+    </string-array>
+    
+</resources>

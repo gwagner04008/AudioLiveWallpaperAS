@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="theme_name_values">
+        <item>"blue"</item>
+        <item>"green"</item>
+        <item>"circle"</item>
+    </string-array>
+    <string-array name="theme_names">
+        <item>"Blue - Reflection"</item>
+        <item>"Green - Vertical mirror"</item>
+        <item>"Radiating circles"</item>
+    </string-array>
+    <color name="GreenYellow">#ADFF2F</color>
+    <color name="LightPink">#FFB6C1</color>
+    <color name="blue">#0000FF</color>
+    <color name="blue_r">#960A00FF</color>
+    <color name="cyan">#00FFFF</color>
+    <color name="cyan_r">#960AFFFF</color>
+    <color name="green">#00FF00</color>
+    <color name="red">#FF0000</color>
+    <string name="app_name">AudioLiveWallpaper</string>
+    <string name="author">smart guys</string>
+    <string name="description">Display FFT microphone data</string>
+    <string name="live_wallpaper_settings">Live Wallpaper Settings</string>
+    <string name="wallpaper_name">Audio FFT Stuff</string>
+</resources>

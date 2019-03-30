@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.livewallpaper.audio"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-feature android:name="android.software.live_wallpaper" />
+    
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:allowBackup="true" >
+        
+        <service 
+            android:label="@string/wallpaper_name"
+            android:name=".AudioLiveWallpaperActivity"
+            android:permission="android.permission.BIND_WALLPAPER" >
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+            </intent-filter>
+            <meta-data android:name="android.service.wallpaper" android:resource="@xml/audiolivewallpaper" />
+        </service>
+        
+        <activity 
+            android:name=".PrefsActivity"
+            android:description="@string/description"
+            android:label="My Settings"
+            android:theme="@android:style/Theme.Black"
+            android:exported="true" >
+            <!--android:theme="@android:style/Theme.WallpaperSettings" -->
+        </activity>
+
+    </application>
+</manifest>

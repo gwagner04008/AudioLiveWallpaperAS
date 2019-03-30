@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AudioLiveWallpaper</string>
+    <string name="wallpaper_name">Audio FFT Stuff</string>
+    <string name="author">smart guys</string>
+    <string name="description">Display FFT microphone data</string>
+    <string name="live_wallpaper_settings">Live Wallpaper Settings</string>
+
+</resources>

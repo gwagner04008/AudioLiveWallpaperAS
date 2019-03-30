@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="MySettings" >
+
+    <PreferenceCategory
+        android:title="@string/live_wallpaper_settings">
+
+        <ListPreference
+            android:key="color_selection"
+            android:title="Color Selection"
+            android:summary="Select between multiple colors to customize your theme"
+            android:entries="@array/theme_names"
+            android:entryValues="@array/theme_name_values" />
+
+        <Preference
+            android:title="Reflection"
+            android:summary="This is a blue fire like theme"
+            android:key="blue" />
+
+        <Preference
+            android:title="Vertical Mirror"
+            android:summary="This theme is more awesome than a dragon!"
+            android:key="green" />
+
+        <Preference
+            android:title="Circle"
+            android:summary="It's like having a speaker on the front of your phone"
+            android:key="circle" />
+
+        <Preference
+            android:title="Nothing"
+            android:summary="This theme does nothing. Used for testing purposes."
+            android:key="nothing" />
+
+    </PreferenceCategory>
+    
+
+
+</PreferenceScreen>
