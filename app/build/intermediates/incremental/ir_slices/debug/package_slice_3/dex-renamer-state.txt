@@ -1,4 +1,0 @@
-#Wed Mar 06 21:43:43 MST 2019
-base.0=C\:\\Users\\Grant\\projects\\AudioLiveWallpaperAS\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\3
-path.0=classes.dex
-renamed.0=classes.dex
