@@ -2,11 +2,13 @@ package com.livewallpaper.audio;
 
 import android.app.WallpaperManager;
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
+import android.preference.PreferenceManager;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.content.pm.PackageManager;
@@ -17,8 +19,8 @@ import android.Manifest;
 public class PrefsActivity extends PreferenceActivity
 	implements SharedPreferences.OnSharedPreferenceChangeListener {
 	
-	Preference button_blue = null;
-	Preference button_green = null;
+	Preference button_reflection = null;
+	Preference button_vertical = null;
 	Preference button_circle = null;
 	Preference button_nothing = null;
 	
@@ -32,12 +34,14 @@ public class PrefsActivity extends PreferenceActivity
         addPreferencesFromResource(R.xml.audio_settings);
         //getPreferenceManager().getSharedPreferences().registerOnSharedPreferenceChangeListener(this);
         
-        button_blue = (Preference) findPreference("blue");
-        button_blue.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+        button_reflection = (Preference) findPreference("reflection");
+        button_reflection.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
 			
 			public boolean onPreferenceClick(Preference preference) {
-				
-				AudioLiveWallpaperActivity.CurrentTheme = "blue";
+				SharedPreferences perf = getSharedPreferences("MySettings", Context.MODE_PRIVATE);
+				String value = perf.getString("color_selection", "none");
+				AudioLiveWallpaperActivity.CurrentColor = value;
+				AudioLiveWallpaperActivity.CurrentTheme = "reflection";
 				Intent i = new Intent(WallpaperManager.ACTION_CHANGE_LIVE_WALLPAPER);
 				i.putExtra(WallpaperManager.EXTRA_LIVE_WALLPAPER_COMPONENT,new ComponentName(getApplicationContext(), AudioLiveWallpaperActivity.class));
 				startActivity(i);
@@ -45,12 +49,14 @@ public class PrefsActivity extends PreferenceActivity
 			}
 		});
         
-        button_green = (Preference) findPreference("green");
-        button_green.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+        button_vertical = (Preference) findPreference("vertical");
+        button_vertical.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
 			
 			public boolean onPreferenceClick(Preference preference) {
-				
-				AudioLiveWallpaperActivity.CurrentTheme = "green";
+				SharedPreferences perf = getSharedPreferences("MySettings", Context.MODE_PRIVATE);
+				String value = perf.getString("color_selection", "none");
+				AudioLiveWallpaperActivity.CurrentColor = value;
+				AudioLiveWallpaperActivity.CurrentTheme = "vertical";
                 Intent i = new Intent(WallpaperManager.ACTION_CHANGE_LIVE_WALLPAPER);
                 i.putExtra(WallpaperManager.EXTRA_LIVE_WALLPAPER_COMPONENT,new ComponentName(getApplicationContext(), AudioLiveWallpaperActivity.class));
                 startActivity(i);
@@ -97,8 +103,8 @@ public class PrefsActivity extends PreferenceActivity
 
 	public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
 		
-		String value = sharedPreferences.getString("theme_selection", "none");
-		AudioLiveWallpaperActivity.CurrentTheme = value;
+		String value = sharedPreferences.getString("color_selection", "none");
+		AudioLiveWallpaperActivity.CurrentColor = value;
 		
 		Log.d("PrefsActivity", value);
 	}

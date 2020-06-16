@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wave_style_names">
+        <item>"Reflection"</item>
+        <item>"Vertical"</item>
+        <item>"Circle"</item>
+    </string-array>
+
+    <string-array name="wave_style_name_values">
+        <item>"reflection"</item>
+        <item>"vertical"</item>
+        <item>"circle"</item>
+    </string-array>
+</resources>

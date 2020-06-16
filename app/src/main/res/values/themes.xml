@@ -2,15 +2,15 @@
 <resources>
     
     <string-array name="theme_names">
-        <item>"Blue - Reflection"</item>
-        <item>"Green - Vertical mirror"</item>
-        <item>"Radiating circles"</item>
+        <item>"Blue"</item>
+        <item>"Green"</item>
+        <item>"Red"</item>
     </string-array>
     
     <string-array name="theme_name_values">
         <item>"blue"</item>
         <item>"green"</item>
-        <item>"circle"</item>
+        <item>"red"</item>
     </string-array>
     
 </resources>

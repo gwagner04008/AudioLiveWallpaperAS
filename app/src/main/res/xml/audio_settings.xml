@@ -12,15 +12,22 @@
             android:entries="@array/theme_names"
             android:entryValues="@array/theme_name_values" />
 
+        <ListPreference
+            android:key="style_selection"
+            android:title="Style Selection"
+            android:summary="Select between multiple styles to customize your theme"
+            android:entries="@array/wave_style_names"
+            android:entryValues="@array/wave_style_name_values" />
+
         <Preference
             android:title="Reflection"
             android:summary="This is a blue fire like theme"
-            android:key="blue" />
+            android:key="reflection" />
 
         <Preference
             android:title="Vertical Mirror"
             android:summary="This theme is more awesome than a dragon!"
-            android:key="green" />
+            android:key="vertical" />
 
         <Preference
             android:title="Circle"
