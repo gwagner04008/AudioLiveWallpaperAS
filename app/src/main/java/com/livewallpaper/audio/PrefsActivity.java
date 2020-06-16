@@ -1,19 +1,18 @@
 package com.livewallpaper.audio;
 
+import android.Manifest;
 import android.app.WallpaperManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
-import android.preference.PreferenceManager;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
-import android.content.pm.PackageManager;
-import android.support.v4.app.ActivityCompat;
-import android.Manifest;
 
 
 public class PrefsActivity extends PreferenceActivity
